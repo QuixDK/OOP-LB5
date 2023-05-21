@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using OOP_LB5.Numbers;
 using OOP_LB5.Units;
+using System.Diagnostics;
 using System.Security.Cryptography;
 
 namespace OOP_LB5
@@ -113,6 +114,11 @@ namespace OOP_LB5
 
         public static void ShowYourHP()
         {
+            if (yourHP <= 0)
+            {
+                Console.WriteLine("Вы проиграли");
+                Environment.Exit(0);
+            }
             Console.WriteLine("Ваше здоровье равно " + yourHP);
         }
 
